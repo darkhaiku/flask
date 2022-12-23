@@ -8,6 +8,16 @@
 </head>
 <body>
     <h1>Hello! Salam! Marhaba! Shalom!</h1>
-    <p>{{packages}}</p>
+    {% for p in packages() %}
+    <div>
+        <span class="name">
+            <!--use python upper() built in func-->
+            {{p.name.upper()}}
+        </span>
+        <span class="version">
+            {{p.version}}
+        </span>
+    </div>
+    {% endfor %}
 </body>
 </html>
